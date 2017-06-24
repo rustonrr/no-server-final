@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { NavLink } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -10,9 +11,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome Ruston</h2>
         </div>
-        <p>
-          test
-        </p>
+        <input>
+        </input>
+        <NavLink to={"/hello"}>Go</NavLink>
       </div>
     );
   }
