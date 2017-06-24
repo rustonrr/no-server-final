@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class Hello extends Component {
     render() {
         return (
             <div>
-                Hello
+                You know nothing {this.props.text} Snow
             </div>
         );
     }
 }
 
-export default Hello;
+function mapStateToProps (state) {
+  return {
+    text: state.userName
+  }
+}
+
+export default connect(mapStateToProps)(Hello);
