@@ -5,11 +5,12 @@ import moment from "moment";
 import Countdown from "react-count-down";
 import TimeAgo from "react-timeago";
 
-const OPTIONS = { endDate: '07/17/2017 09:00 PM', prefix: 'until the premiere!'}
+
+const OPTIONS = { endDate: '07/17/2017 09:00 PM', prefix: 'until the premiere!' }
 
 class Hello extends Component {
 
-    
+
     render() {
         return (
             <div>
@@ -25,10 +26,6 @@ class Hello extends Component {
 
                     <Countdown options={OPTIONS} />
 
-                    <TimeAgo date="Feb 1, 1966" />
-
-
-
                 </div>
             </div>
         );
@@ -36,12 +33,11 @@ class Hello extends Component {
 }
 
 
-
-function mapStateToProps (state) {
-  return {
-    text: state.userName,
-    time: state.time
-  }
+function mapStateToProps(state) {
+    return {
+        text: state.userName,
+        time: state.time
+    }
 }
 
 export default connect(mapStateToProps)(Hello);
