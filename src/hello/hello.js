@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import moment from "moment";
 import Countdown from "react-count-down";
 import './hello.css';
-import GIPHY_API_KEY from "./giphy-api-key";
+import GIPHY_API_KEY from "../giphy-api-key";
 
 var giphy = require('giphy-api')(GIPHY_API_KEY);
 
