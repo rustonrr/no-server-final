@@ -20,13 +20,13 @@ class App extends Component {
 
         <div hidden={!this.state.hidePicture}>
           <input placeholder="Enter Name" value={this.props.text} onChange={this.props.onTextChange} />
-          <NavLink to={"/hello"}>Go</NavLink>
+          <NavLink to={"/hello"}> Go</NavLink>
           {/*Test: {this.props.text}*/}
-          <div>
+          <div className="Countdown-to-head-cutoff">
             <CountUp
-              start={30}
+              start={10}
               end={0}
-              duration={4}
+              duration={10}
               useEasing={false}
               separator=" "
               suffix=" remaining"
@@ -35,8 +35,10 @@ class App extends Component {
           </div>
         </div>
 
-        <div>
-          <img src="http://i.imgur.com/K8xRUaA.gif" hidden={this.state.hidePicture} />
+        <div hidden={this.state.hidePicture} className="Dead" >
+          <h1>Too late, you're dead</h1>
+          <img src="http://i.imgur.com/K8xRUaA.gif" />
+          <h3>No second chances when you're dead</h3>
         </div>
 
       </div>

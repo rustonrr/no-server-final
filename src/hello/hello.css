@@ -1,0 +1,20 @@
+* {
+   border: 1px solid red !important;
+}
+
+.Hello {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-family: gothic;
+
+}
+
+.You-know-nothing {
+    margin-top: 5%;
+}
+
+.Countdown-to-premiere {
+    margin-top: 60%;
+
+}

@@ -3,29 +3,24 @@ import { connect } from "react-redux";
 // import Moment from "react-moment";
 import moment from "moment";
 import Countdown from "react-count-down";
-import TimeAgo from "react-timeago";
+import './hello.css';
 
 
-const OPTIONS = { endDate: '07/17/2017 09:00 PM', prefix: 'until the premiere!' }
+
+const OPTIONS = { endDate: '07/17/2017 09:00 PM', prefix: 'until Season 7 premiere!' }
 
 class Hello extends Component {
 
 
     render() {
         return (
-            <div>
-                <div>
+            <div className="Hello">
+                <div className="You-know-nothing">
                     You know nothing {this.props.text} Snow
                 </div>
 
-                <div>
-                    {/*{this.props.time}*/}
-                    {/*{moment().format("LTS")}
-                    <p> test </p>
-                    {moment().startOf("minute").fromNow()}*/}
-
+                <div className="Countdown-to-premiere">
                     <Countdown options={OPTIONS} />
-
                 </div>
             </div>
         );
