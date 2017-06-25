@@ -29,7 +29,8 @@ class App extends Component {
               duration={10}
               useEasing={false}
               separator=" "
-              suffix=" remaining"
+              prefix="You have "
+              suffix=" seconds to enter your name..."
               onComplete={() => this.setState({ hidePicture: false })}
             />
           </div>
@@ -38,7 +39,7 @@ class App extends Component {
         <div hidden={this.state.hidePicture} className="Dead" >
           <h1>Too late, you're dead</h1>
           <img src="http://i.imgur.com/K8xRUaA.gif" />
-          <h3>No second chances when you're dead</h3>
+          <h4>No second chances when you're dead</h4>
         </div>
 
       </div>
