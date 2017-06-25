@@ -5,6 +5,7 @@ import moment from "moment";
 import Countdown from "react-count-down";
 import './hello.css';
 import GIPHY_API_KEY from "../giphy-api-key";
+import _ from "lodash";
 
 var giphy = require('giphy-api')(GIPHY_API_KEY);
 
@@ -18,24 +19,29 @@ class Hello extends Component {
     }
 
     componentDidMount() {
-        giphy.search('game of thrones death').then( (response) => {
-            console.log(response.data[0])
-            this.setState({deathGifURL: response.data[0].images.downsized_medium.url})
-            
+        giphy.search('game of thrones death').then((response) => {
+            console.log(response.data.length)
+
+            this.setState({ deathGifURL: _.sample(response.data).images.downsized_medium.url })
+            // _.sample(collection)
+
         });
     }
     render() {
         return (
             <div className="Hello">
+                <div className="Countdown-to-premiere">
+                    <Countdown options={OPTIONS} />
+                </div>
+
+
                 <div className="You-know-nothing">
                     You know nothing {this.props.text} Snow
                 </div>
 
                 <img src={this.state.deathGifURL} />
 
-                <div className="Countdown-to-premiere">
-                    <Countdown options={OPTIONS} />
-                </div>
+
             </div>
         );
     }
