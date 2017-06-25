@@ -1,7 +1,9 @@
+
 var ON_USER_NAME_CHANGE = "ON_USER_NAME_CHANGE";
 
 const initialState = {
-    userName: ""
+    userName: "",
+    time: ""
 };
 
 
@@ -12,7 +14,8 @@ export default function appState(state = initialState, action) {
         // console.log(state);
             return {
                 ...state,
-                userName: action.value
+                userName: action.value,
+                time: new Date().toISOString()
             };
         default: 
             return state;
