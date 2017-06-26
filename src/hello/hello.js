@@ -10,7 +10,7 @@ import _ from "lodash";
 var giphy = require('giphy-api')(GIPHY_API_KEY);
 
 
-const OPTIONS = { endDate: '07/17/2017 09:00 PM', prefix: 'until Season 7 premiere!' }
+const OPTIONS = { endDate: '07/16/2017 09:00 PM', prefix: 'until Season 7 premiere!' }
 
 class Hello extends Component {
     constructor() {
